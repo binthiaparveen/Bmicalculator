@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+
+        android:id="@+id/heightET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="0"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/heightParent"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/htTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Height"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/heightParent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/heightParent"
+                app:layout_constraintTop_toTopOf="@+id/heightParent"
+                tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/cmTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="(cm)"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/htTV"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="@+id/htTV"
+            app:layout_constraintTop_toBottomOf="@+id/htTV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/weightET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="0"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weightParent"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/wtTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/kgTV"
+            app:layout_constraintStart_toStartOf="@+id/kgTV"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <TextView
+            android:id="@+id/kgTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(kg)"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="123dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/resultParent"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/resTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="You are Normal"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/resultParent"
+                app:layout_constraintStart_toStartOf="@+id/resultParent"
+                app:layout_constraintTop_toTopOf="@+id/resultParent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/resBmi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="0"
+                android:textAlignment="center"
+                android:textColorHint="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="@+id/resTV"
+                app:layout_constraintStart_toStartOf="@+id/resTV"
+                app:layout_constraintTop_toBottomOf="@+id/resTV"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/resRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:text="your range is 10-15"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintEnd_toEndOf="@+id/resBmi"
+                app:layout_constraintStart_toStartOf="@+id/resBmi"
+                app:layout_constraintTop_toBottomOf="@+id/resBmi"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:visibility="gone"
+            android:id="@+id/clearBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start again"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#473333"
+            android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/calBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ED7676"
+        android:text="Calculate"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:cornerRadius="500dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="516dp" />
+
+
+</LinearLayout>
